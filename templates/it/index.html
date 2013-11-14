@@ -1,0 +1,165 @@
+{% extends "it/base.html" %}
+{% block menu %}{{ menu('home') }}{% endblock %}
+{% block content %}
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="row">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <div class="container">
+                                <div class="carousel-img">
+                                    <img alt="Penna usb" src="{{ url_for('static', filename='slide-conte.png') }}">
+                                </div>
+                                <div class="carousel-text">
+                                    <h1>Sempre con te</h1>
+                                    <p class="lead">Freepto è una penna usb, quindi puoi averla sempre in tasca</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <div class="container">
+                                <div class="carousel-img">
+                                    <img heigth="200px" alt="" src="{{ url_for('static', filename='slide-sicura.png') }}">
+                                </div>
+                                <div class="carousel-text">
+                                    <h1>Sicura</h1>
+                                    <p class="lead">Freepto è cifrata, e i suoi programmi usano accorgimenti per migliorare la tua sicurezza</p>
+                                </div>
+                            </div>
+                        </div><!--item-->
+                        <div class="item">
+                            <div class="container">
+                                <div class="carousel-img">
+                                    <img alt="Completa" src="{{ url_for('static', filename='slide-completa.png') }}">
+                                </div>
+                                <div class="carousel-text">
+                                    <h1>Completa</h1>
+                                    <p class="lead">Freepto è un sistema operativo completo basato 
+                                    su Debian GNU/Linux, con tutti i programmi che ti servono: suite office,
+                                    grafica, audio, chat, mail, browser</p>
+                                </div>
+                            </div>
+                        </div><!--item-->
+                    </div><!--carousel-inner -->
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                </div><!--carousel-->
+            </div><!--row-->
+            <!-- Example row of columns -->
+            <div class="row-fluid">
+                <div class="span4">
+                    <h2>Cos'è Freepto?</h2>
+                    <p>Freepto è un sistema Linux completo su penna USB. Questo significa
+                    che puoi portare la pennetta sempre con te ed utilizzare qualsiasi computer
+                    proprio come se fosse il tuo portatile.  Inoltre i dati che salverai
+                    all’interno di questa pennetta saranno automaticamente cifrati (ovvero non
+                    potranno essere letti da nessun altro).</p>
+                    <p>L’idea che sta alla base dello sviluppo di Freepto è quella di offrire un sistema <em>semplice</em> per la gestione sicura degli strumenti utilizzati più frequententemente dagli attivisti, senza però rinunciare alla <em>comodità</em> di un sistema operativo tradizionale.</p>
+                    <p><a href="https://we.riseup.net/avana/opuscolo#freepto" target="_blank">Continua a leggere »</a></p>
+                </div>
+                <div class="span4">
+                    <h2>Come si usa?</h2>
+                    <p>Usare Freepto è facilissimo.</p>
+                    <p>Basta inserire la penna usb nel computer quando questo è spento, quindi accendere, <a href="https://we.riseup.net/avana/freepto-docs#come-avvio-freepto">selezionare il boot da usb</a>, e freepto si avvierà</p>
+                    <p>Per avere tutte le informazioni su come installare, avviare ed utilizzare Freepto, puoi leggere la pagina della documentazione.</p>
+                    <p><a href="https://we.riseup.net/avana/freepto-docs" target="_blank">Documentazione »</a></p>
+                </div>
+                <div class="span4">
+                    <h2>Chi siamo</h2>
+                    <p>«Av.A.Na - Avvisi Ai Naviganti non è un progetto o un insieme di
+                    progetti, piuttosto un processo collettivo di autoapprendimento. È la
+                    startup della conoscenza. È la pastella delle idee. Ha un approccio e
+                    promuove un utilizzo critico e consapevole dell'informatica e delle
+                    tecnologie.</p>
+                    <p>AvANa non fa corsi e non insegna nulla, piuttosto è lo 
+                    spazio e il tempo nel quale scambiare saperi e conoscenze, ricercando il
+                    piacere dell'orizzontalità. (luglio 2012)».</p>
+                    <a href="http://avana.forteprenestino.net/" target="_blank">Vai al sito »</a>
+                </div>
+            </div><!--row-->
+
+            <hr class="featurette-divider">
+            <div class="featurette">
+                <img class="featurette-image pull-right" src="{{ url_for('static', filename='slide-conte.png') }}">
+                <h2 class="featurette-heading">Sempre con te <span class="muted">Un
+                        sistema operativo in tasca</span></h2>
+                <p class="lead">Freepto è un sistema oeprativo completo dentro
+                una penna usb. La puoi usare da qualsiasi computer, e avrai tutto cio’
+                che ti serve. Non si tratta di un sistema da usare solo in casi di
+                emergenza: freepto è adatto ad un utilizzo quotidiano.</p>
+            </div>
+            <hr class="featurette-divider">
+            <div class="featurette">
+                <img class="featurette-image pull-left" src="{{ url_for('static', filename='luks-pass.png') }}">
+                <h2 class="featurette-heading">Cifrata <span class="muted">per custodire i segreti</span></h2>
+                <p class="lead">Tutto il contenuto di freepto è cifrato con una
+                password che solo tu sai. In questo modo anche se perdi la chiave, o ti
+                viene sottratta, non devi preoccuparti che i tuoi dati siano in mano
+                alle persone sbagliate</p>
+            </div>
+            <hr class="featurette-divider">
+            <div class="featurette">
+                <!--        <img class="featurette-image pull-right" src="img/luks-pass.png"></img>-->
+                <h2 class="featurette-heading">Tutto incluso <span class="muted">dalla
+                        posta alla grafica</span></h2>
+                <p class="lead">Freepto contiene molti dei programmi utili: browser,
+                lettore di posta, editor di immagini… e se qualcosa manca, lo si puo’
+                sempre installare grazie a synaptic, il gestore dei pacchetti presente
+                anche in debian e ubuntu.</p>
+            </div>
+            <hr class="featurette-divider">
+            <div class="featurette">
+                <img class="featurette-image pull-left" src="{{ url_for('static', filename='slide-sicura.png') }}">
+                <h2 class="featurette-heading">Preconfigurata per la sicurezza</h2>
+                <p class="lead">Abbiamo cercato di rendere freepto piu’ sicura possibile senza che questo peggiorasse in alcun modo l’esperienza dell’utente:
+                </p><ul class="lead">
+                <li>i programmi di chat e filezilla sono configurati per l’utilizzo di tor,
+                in modo da avere connessioni anonime e sicure.</li>
+                <li>firefox include delle estensioni per cifrare la comunicazione con i
+                server il piu’ possibile</li>
+                <li>con firefox si puo’ navigare verso i siti <tt>.onion</tt> (siti interni alla
+                rete tor la cui posizione e’ nascosta)</li>
+            </ul>
+            <p></p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="featurette">
+            <img class="featurette-image pull-right" src="{{ url_for('static', filename='freepto-menu-zoom.png') }}">
+            <h2 class="featurette-heading">Paranoia aggiuntiva <span class="muted">opzionale, ma a portata di mano</span></h2>
+            <p class="lead">Aumentare il proprio livello di sicurezza dovrebbe essere
+            opzionale ma semplice; per questo abbiamo incluso dentro freepto una <a href="https://github.com/AvANa-BBS/freepto-lb/blob/master/config/package-lists/package.list.chroot">serie
+                di tool</a> per chi vuole raggiungerlo:
+            </p><ul class="lead">
+            <li>cancellazione sicura dei file</li>
+            <li>truecrypt, per gestire archivi cifrati</li>
+            <li>torbrowser-launcher, per avere sempre l’ultima versione di torbrowser e navigare in modo anonimo</li>
+            <li>GPG, per scambiarsi mail cifrate</li>
+            <li>pidgin-otr, per avere chat sicure in modo molto semplice</li>
+            <li><tt>TorTP</tt>, per forzare l’uso di TOR a tutte le applicazioni che utilizzano la rete</li>
+            <li>florence, per avere una tastiera virtuale dove inserire le tue password</li>
+            <li><tt>tomb</tt>, per la gestione avanzata di archivi cifrati</li>
+        </ul>
+        <p></p>
+    </div>
+    <hr class="featurette-divider">
+    <div class="featurette">
+        <img class="featurette-image pull-left" src="{{ url_for('static', filename='doc.png') }}">
+        <h2 class="featurette-heading">Documentazione inclusa</h2>
+        <p class="lead">Usare freepto è facile, ma è sempre utile avere della 
+        documentazione da leggere per qualsiasi necessità. Per questo abbiamo 
+        incluso dentro freepto il suo stesso <a href="https://we.riseup.net/avana/freepto-docs">manuale</a>, che ti aiuterà a usarla nel modo migliore possibile. </p><p class="lead">Abbiamo anche incluso <a href="https://we.riseup.net/avana/opuscolo/">Crypt'r'die</a>, un opuscolo dedicato alla difesa dal controllo digitale che abbiamo prodotto: è organizzato in semplici "ricette" per
+        migliorare la propria sicurezza, dagli un'occhiata!</p>
+    </div>
+    <hr class="featurette-divider">
+    <div class="featurette">
+        <img class="featurette-image pull-right" src="{{ url_for('static', filename='livebuild.png') }}">
+        <h2 class="featurette-heading">Personalizzabile</h2>
+        <p class="lead">Se vuoi, puoi creare una versione modificata di 
+        freepto, includendo nuovi software o effettuando modifiche di qualsiasi 
+        tipo. Freepto infatti è basata su Debian Live Build, un insieme di tool 
+        che permettono di generare delle distribuzioni live personalizzate 
+        basate su debian. Puoi contribuire a partire dal <a href="https://github.com/AvANa-BBS/freepto-lb">nostro repository</a>.</p>
+    </div>
+{% endblock %}

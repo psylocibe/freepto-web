@@ -1,0 +1,86 @@
+{% macro menu(actived) %}
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="">Freepto</a>
+                    <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li{% if actived == 'home' %} class="active"{% endif %}><a href="/es/">Home</a></li>
+                            <li{% if actived == 'use' %} class="active"{% endif %}><a href="/es/usa_freepto/">Usa freepto</a></li>
+                            <li class="dropdown{% if actived == 'contrib' %} active{% endif %}">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribuye</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/es/dev-team/">Dev Team</a></li>
+                                    <li><a href="/es/testing-team/">Testing Team</a></li>
+                                    <li><a href="/es/doc-team/">Doc Team</a></li>
+                                </ul>
+                            </li>
+                            <li{% if actived == 'contacts' %} class="active"{% endif %}><a href="/es/contactos/">Contactos</a></li>
+<!--                            <li{% if actived == 'faq' %} class="active"{% endif %}><a href="/es/faq/">Faq</a></li> -->
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li><a href="/it/">Italiano</a></li>
+                            <li class="active"><a href="/es/">Castellano</a></li>
+                        </ul>
+                    </div><!--collapse-->
+                </div><!--navbar-inner-->
+            </div><!--container-fluid-->
+        </div><!--navbar-->
+{% endmacro %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>AvANa | Freepto 0.1.1 – Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="{{ url_for('static', filename='files/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='files/bootstrap-responsive.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='files/custom.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='files/featurette.css') }}" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='files/slimbox2.css') }}" type="text/css" media="screen">
+    </head>
+
+    <body>
+        {% block menu %}{% endblock %}
+        <div class="container">
+            {% block content %}{% endblock %}
+
+            <hr>
+            <footer>
+            <p><a href="http://freepto.mx/">Freepto</a> | No Copyright | <a href="http://www.inventati.org/"><img src="{{ url_for('static', filename='files/icon-hostedby.png') }}"></a></p>
+            </footer>
+        </div>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ url_for('static', filename='files/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='files/bootstrap.js') }}"></script>
+<script src="{{ url_for('static', filename='files/slimbox2.js') }}"></script>
+<script src="{{ url_for('static', filename='files/home.js') }}"></script> <!-- this page js -->
+
+
+<div style="display: none;" id="lbOverlay"></div><div style="display: none;" id="lbCenter"><div id="lbImage"><div style="position: relative;"><a id="lbPrevLink" href="#"></a><a id="lbNextLink" href="#"></a></div></div></div><div style="display: none;" id="lbBottomContainer"><div id="lbBottom"><a id="lbCloseLink" href="#"></a><div id="lbCaption"></div><div id="lbNumber"></div><div style="clear: both;"></div></div></div>
+    </body>
+</html>

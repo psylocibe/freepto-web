@@ -1,0 +1,26 @@
+{% extends "es/base.html" %}
+{% block menu %}{{ menu('contrib') }}{% endblock %}
+{% block content %}
+<div class="row-fluid">
+    <div class="span6">
+        <h2>Como colaborar</h2>
+        <p>El desarrollo de Freepto se basa en el sistema <a href="http://live.debian.net/">Debian Live Build</a> y en el desarrollo de aplicaciones para la seguridad de los usuarios.</p>
+        <p>El modelo de organización que seguimos es un modelo abierto y comunitario, así que puedes unirte al equipo de desarrolladores si quieres.</p>
+        <p>Por las comunicaciones se suele usar la lista de correo general <a href="mailto:freepto@autistici.org">freepto@autistici.org</a> o con un contacto directo entre los desarrolladores por cuestiones de menor importancia.</p>
+        <p>Las versiones de desarrollo y las versiones beta la puedes encontrar al enlace <a href="http://dev.freepto.mx/">http://dev.freepto.mx/</a>.</p>
+    </div>
+    <div class="span6">
+        <h2>El repositorio</h2>
+        <p>El código fuente es disponible en el repositorio <a href="https://github.com/AvANa-BBS/freepto-lb/">https://github.com/AvANa-BBS/freepto-lb/</a>, de manera que el desarrollo quede publico y abierto también a quien quiera contribuir de manera esporádica.</p>
+        <p>El espacio de github también es usado para gestionar los tickets y la timeline de desarrollo general.</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="span12">
+        <h2>Crear un ambiente de desarrollo</h2>
+        <p>Hemos creado un sistema para automatizar el proceso de instalación y configuración de un ambiente de desarrollo. El código se basa en las librerías <em>fabric</em> y <em>fabtools</em> de python. Para el futuro está planeada la creación de ambientes de desarrollo con Vagrant.</p>
+        <p>Para mayor información puedes mirar el repositorio <a href="https://github.com/AvANa-BBS/freepto-buildtools">https://github.com/AvANa-BBS/freepto-buildtools</a>.</p>
+    </div>
+</div>
+{% endblock %}

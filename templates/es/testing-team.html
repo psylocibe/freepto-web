@@ -1,0 +1,18 @@
+{% extends "es/base.html" %}
+{% block menu %}{{ menu('contrib') }}{% endblock %}
+{% block content %}
+<div class="row-fluid">
+    <div class="span6">
+        <h2>Como colaborar</h2>
+        <p>El testing de Freepto se suele hacer por todas las versiones beta y stable del proyecto.</p>
+        <p>Las versiones de desarrollo no suelen ser probadas por todos, siempre que el desarrollador en cuestión no lo pida.</p>
+        <p>La comunicación se suele llevar en la lista de correo general <a href="mailto:freepto@autistici.org">freepto@autistici.org</a>. Si quieres unirte al grupo de testing ¡inscríbete a la lista y presentate!</p>
+        <p>Las versiones de desarrollo y las versiones beta la puedes encontrar al enlace <a href="http://dev.freepto.mx/">http://dev.freepto.mx/</a>.</p>
+    </div>
+    <div class="span6">
+        <h2>Tips&Tools</h2>
+        <p>Para hacer testing de Freepto sin la persistencia puedes usar qemu para no tener que instalarla en un dispositivo. Aquí tienes un ejemplo por sistemas x86_64:</p>
+        <code>qemu-system-x86_64 -cpu kvm64 -enable-kvm freepto-es_ES-0.1.2.img</code>
+    </div>
+</div>
+{% endblock %}

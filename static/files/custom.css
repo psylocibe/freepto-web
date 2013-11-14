@@ -1,0 +1,25 @@
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+#myCarousel .item .container {
+	height: 250px;
+	display: table;
+}
+.carousel-img {
+	display: table-cell;
+	vertical-align: middle;
+	height: 250px;
+}
+.carousel-img img {
+	width: 300px;
+}
+.carousel-text {
+	display: table-cell;
+	vertical-align: middle;
+	height: 250px;
+}
+
+@media (max-width: 767px) {
+	.carousel-img img { width: 100px; }
+}

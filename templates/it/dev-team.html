@@ -1,0 +1,27 @@
+{% extends "it/base.html" %}
+{% block menu %}{{ menu('contrib') }}{% endblock %}
+{% block content %}
+<div class="row-fluid">
+    <div class="span6">
+        <h2>Come collaborare</h2>
+        <p>Lo sviluppo di Freepto si basa sul sistema <a href="http://live.debian.net/">Debian Live Build</a> e nello sviluppo delle applicazioni per la sicurezza degli utenti.</p>
+        <p>Il modello di organizzazione che seguiamo è un modello aperto e comunitario, quindi se vuoi puoi unirti al gruppo di sviluppo.</p>
+        <p>La comunicazione dello sviluppo si svolge nella <a href="/it/contatti/">mailing-list</a> generale o con un contatto diretto tra gli sviluppatori per questioni di minor importanza sul nostro canale <a href="/it//contatti/">IRC</a>.</p>
+        <p>Le versioni di sviluppo le puoi trovare a questa pagina <a href="http://dev.freepto.org">http://dev.freepto.org/</a>.</p>
+    </div>
+    <div class="span6">
+        <h2>Il repository</h2>
+        <p>Il codice sorgente è disponibile al repository <a href="https://github.com/AvANa-BBS/freepto-lb/">https://github.com/AvANa-BBS/freepto-lb/</a>, cosicché lo sviluppo sia pubblico e aperto a chi voglia partecipare anche in modo sporadico.</p>
+        <p>Lo spazio di <a href="https://github.com/AvANa-BBS/">GitHub</a> è anche usato per gestire i <a href="https://github.com/AvANa-BBS/freepto-lb/issues?milestone=&amp;page=1&amp;state=open">ticket</a> e la timeline dello sviluppo generale.</p>
+        <p>Se hai un bug da segnalare puoi usare la pagina di GitHub oppure <a href="http://draft.freepto.mx/it/contatti/">scriverci una mail</a>.</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="span12">
+        <h2>Creare un ambiente di sviluppo</h2>
+        <p>Abbiamo creato un sistema per automatizzare il processo di installazione e configurazione di un ambiente di sviluppo. Il codice si basa sulle librerie <em>fabric</em> e <em>fabtools</em> di python.</p>
+        <p>Per maggiori informazioni puoi guardare il repository <a href="https://github.com/AvANa-BBS/freepto-buildtools">https://github.com/AvANa-BBS/freepto-buildtools</a>.</p>
+    </div>
+</div>
+{% endblock %}
