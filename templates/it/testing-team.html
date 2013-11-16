@@ -4,13 +4,18 @@
 <div class="row-fluid">
     <div class="span6">
         <h2>Come collaborare</h2>
-        <p>Iscriviti alla lista</p>
-    </div>
-    <div class="span6">
-        <h2>Tips&Tools</h2>
+        <p>Il testing di Freepto coinvolge le versione di sviluppo e le versioni <em>stable</em> del progetto.</p>
+        <p>In genere ogni sviluppatore testa cio' che fa, dunque i tester devono effettuare testing 'periodici' per scoprire bug inavvertitamente aggiunti.</p>
+        <p>A volte, pero', gli sviluppatori stessi possono richiedere un test migliore, ad esempio nel caso di modifiche consistenti al sistema, o di cambiamenti che potrebbero dipendere dall'hardware usato. In questo caso, gli sviluppatori creeranno una build e chiederanno, nella mailing list di coordinamento, un parere ai tester.</p>
+        <p>La comunicazione si svolge nella <a href="/es/contactos/">mailing-list generale</a>. Se vuoi unirti al gruppo di sviluppo iscriviti alla lista e presentati!</p>
         <p>Puoi scaricare le versioni ancora in fase di sviluppo  a partire da questa pagina:<br></p>
         <p><a href="http://dev.freepto.mx/dev/freepto-lb/">dev.freepto.mx</a></p>
         <p>E seguire poi la <a href="http://draft.freepto.mx/it/usa_freepto/">documentazione</a> per creare una nuova chiavetta USB con Freepto pronta per essere testata.</p>
+    </div>
+    <div class="span6">
+        <h2>Tips&Tools</h2>
+        <p>Per fare il testing di Freepto senza la persistenza puoi usare <em>qemu</em> senza dover usare un dispositivo USB. Riportiamo qui un esempio per i sistemi x86_64:</p>
+        <code>qemu-system-x86_64 -cpu kvm64 -enable-kvm freepto-it_IT-0.1.2.img</code>
     </div>
 </div>
 {% endblock %}
