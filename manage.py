@@ -22,6 +22,7 @@ def page():
     yield {'lang':'it', 'title':'dev-team'}
     yield {'lang':'it', 'title':'doc-team'}
     yield {'lang':'it', 'title':'testing-team'}
+    yield {'lang':'it', 'title':'eventi'}
 
     yield {'lang':'es', 'title':'usa_freepto'}
     yield {'lang':'es', 'title':'contactos'}
@@ -29,6 +30,7 @@ def page():
     yield {'lang':'es', 'title':'dev-team'}
     yield {'lang':'es', 'title':'doc-team'}
     yield {'lang':'es', 'title':'testing-team'}
+    yield {'lang':'es', 'title':'eventos'}
 
 @manager.command
 def freeze():
