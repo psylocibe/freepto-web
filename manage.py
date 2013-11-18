@@ -18,7 +18,6 @@ def page_index():
 def page():
     yield {'lang':'it', 'title':'usa_freepto'}
     yield {'lang':'it', 'title':'contatti'}
-    yield {'lang':'it', 'title':'faq'}
     yield {'lang':'it', 'title':'dev-team'}
     yield {'lang':'it', 'title':'doc-team'}
     yield {'lang':'it', 'title':'testing-team'}
@@ -26,7 +25,6 @@ def page():
 
     yield {'lang':'es', 'title':'usa_freepto'}
     yield {'lang':'es', 'title':'contactos'}
-    yield {'lang':'es', 'title':'faq'}
     yield {'lang':'es', 'title':'dev-team'}
     yield {'lang':'es', 'title':'doc-team'}
     yield {'lang':'es', 'title':'testing-team'}
