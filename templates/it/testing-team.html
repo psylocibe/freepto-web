@@ -14,15 +14,14 @@
     </div>
     <div class="span6">
         <h2>Tips&Tools</h2>
-        <p>Per fare il testing di Freepto senza un dispositivo USB puoi usare <em>qemu</em> oppure <em>VirtualBox</em>. In questo modo però ovviamente non ti sarà possibile testare il corretto funzionamento della persistenza cifrata</p>
+        <p>Per fare il testing di Freepto senza un dispositivo USB puoi usare <em>Qemu/KVM</em> oppure <em>VirtualBox</em>. In questo modo però ovviamente non ti sarà possibile testare il corretto funzionamento della persistenza cifrata</p>
         
-        <h3>qemu/kvm</h3>
+        <h3>Qemu/KVM</h3>
         <p>Un esempio (per i sistemi x86_64):</p>
         <code>qemu-system-x86_64 -cpu kvm64 -enable-kvm freepto-it_IT-0.1.2.img</code>
-
+        
         <h3>VirtualBox</h3>
         <p>Per creare una virtualmachine con virtualbox puoi scaricare lo script <a href="https://raw.github.com/AvANa-BBS/freepto-lb/master/tools/vboxtesting.sh">vboxtesting</a>.</p>
-        <p>Uso da CLI:</p>
         <p><code>wget http://raw.github.com/AvANa-BBS/freepto-lb/master/tools/vboxtesting.sh</code></p>
         <p><code>chmod +x vboxsetting.sh</code></p>
         <p><code>bash vboxtesting.sh</code></p>
