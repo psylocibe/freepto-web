@@ -1,0 +1,35 @@
+{% extends "it/base.html" %}
+{% block menu %}{{ menu('download') }}{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="span12">
+        <h2><a href="http://download.freepto.mx">Scarica freepto</a></h2>
+        <!-- <p><a href="http://download.freepto.mx">http://download.freepto.mx</a></p>
+        <h4>Torrent</h4>
+        <p><a href="static/freepto-0.1.2.torrent">freepto-0.1.2.torrent</a> -->
+
+        <h2>Verificare l'immagine scaricata</h2>
+        <p>E' possibile verificare l'immagine di Freepto in pochi semplici passaggi:
+        <ul>
+            <li><strong>1. Scarica la nostra chiave GPG pubblica:</strong></li>
+            <p><code>gpg --search-key 364B68D4</code></p>
+                
+            <li><strong>2. Verifica il fingerprint della chiave:</strong></li>
+                <p>Verifica che l'output di questo comando:</p>
+                <p><code>gpg --fingerprint 364B68D4</code></p>
+                <p>Sia uguale a quello mostrato di seguito:</p>
+                <p><code>Key fingerprint = C355 97C8 7BE0 8D11 A5D8  4087 909C 6C75 364B 68D4</code></p>
+
+            <li><strong>3. Verifica l'hash dell'immagine</strong></li>
+                <p>Esegui i seguenti comandi e verifica che l'output sia identico per entrambi:</p>
+                <p><code>sha1sum freepto-0.1.2.img</code></p>
+                <p><code>cat freepto-0.1.2.img.sha1sum</code></p>
+
+            <li><strong>4. Verifica la firma dell'hash</strong></li>
+                <p><code>gpg --keyid-format long --verify freepto-0.1.2.img.sha1sum.sig</code></p>
+        </ul>
+
+        <h2><a href="it/usa_freepto/">Installa freepto</a></h2>
+    </div>
+</div>
+{% endblock %}

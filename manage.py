@@ -22,6 +22,7 @@ def page():
     yield {'lang':'it', 'title':'doc-team'}
     yield {'lang':'it', 'title':'testing-team'}
     yield {'lang':'it', 'title':'eventi'}
+    yield {'lang':'it', 'title':'download'}
 
     yield {'lang':'es', 'title':'usa_freepto'}
     yield {'lang':'es', 'title':'contactos'}
