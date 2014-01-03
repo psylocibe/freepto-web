@@ -23,12 +23,12 @@
             <li><strong>Verifica l'hash dell'immagine</strong></li>
             <p><em>Questo passaggio ti permette di verificare che l'immagine scaricata non sia stata corrotta in fase di download</em></p>
                 <p>Esegui i seguenti comandi e verifica che l'output sia identico per entrambi:</p>
-                <p><code>sha1sum freepto-X.X.X.img</code></p>
-                <p><code>cat freepto-X.X:X.img.sha1sum</code></p>
+                <p><code>sha512sum freepto-X.X.X.img</code></p>
+                <p><code>cat freepto-X.X:X.img.sha512sum.txt</code></p>
 
             <li><strong>Verifica la firma dell'hash</strong></li>
             <p><em>Questo passaggio permette di verificare che l'immagine che hai scaricato sia stata rilasciata da noi</em></p>
-                <p><code>gpg --keyid-format long --verify freepto-X.X.X.img.sha1sum.sig</code></p>
+                <p><code>gpg --keyid-format long --verify freepto-X.X.X.img.sha512sum.txt.sig</code></p>
         </ul>
 
         <h2>Installa</h2>
