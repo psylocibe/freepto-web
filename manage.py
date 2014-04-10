@@ -33,7 +33,9 @@ def page():
     yield {'lang':'es', 'title':'eventos'}
     yield {'lang':'es', 'title':'noticias'}
     yield {'lang':'es', 'title':'descargas'}
-    
+
+    yield {'lang':'en', 'title':'news'}
+
 @manager.command
 def freeze():
     freezer.freeze()
