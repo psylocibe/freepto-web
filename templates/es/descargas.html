@@ -1,0 +1,38 @@
+{% extends "es/base.html" %}
+{% block menu %}{{ menu('download') }}{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="span12">
+        <h2>Descarga</h2>
+        <p><em>A partir de este elnace puedes descargar la &uacute;ltima versión de Freepto y elegir si bajarla via HTTP o Torrent:</em></p>
+        <p><a href="http://download.freepto.mx">http://download.freepto.mx</a>
+
+        <h2>Verificar</h2>
+        <p>Puedes verificar la integridad y la autenticidad del fichero bajado en pocos simples pasos:</p>
+        <ul>
+            <li><strong>Descarga la nuestra llave GPG pública:</strong></li>
+            <p><code>gpg --search-key 364B68D4</code></p>
+                
+            <li><strong>Verifica el fingerprint de la llave:</strong></li>
+            <p><em>Este paso es necesario para asegurarte que la llave GPG bajada es la nuestra</em></p>
+                <p>Verifica que el fingerprint que te ense&ntilde;a este comando:</p>
+                <p><code>gpg --fingerprint 364B68D4</code></p>
+                <p>sea el mismo que te enseñamos aqu&iacute;:</p>
+                <p><code>Key fingerprint = C355 97C8 7BE0 8D11 A5D8  4087 909C 6C75 364B 68D4</code></p>
+
+            <li><strong>Verificar el hash del fichero</strong></li>
+            <p><em>Este paso te permite verificar que el fichero bajado no haya sido sido corrumpido en el paso de descarga</em></p>
+                <p>Ejecutas los siguientes comandos y verifica que el output sea el mismo para los dos:</p>
+                <p><code>sha1sum freepto-X.X.X.img</code></p>
+                <p><code>cat freepto-X.X:X.img.sha1sum</code></p>
+
+            <li><strong>Verifica la firma del hash</strong></li>
+            <p><em>Este paso permite verificar que el fichero que has bajado sea el mismo publicado por nosotros</em></p>
+                <p><code>gpg --keyid-format long --verify freepto-X.X.X.img.sha1sum.sig</code></p>
+        </ul>
+
+        <h2>Instalaci&oacute;n</h2>
+        <p><em>Mira la <a href="/es/usa_freepto">documentaci&oacute;n</a> para descubrir como instalar Freepto.</em></p>
+    </div>
+</div>
+{% endblock %}

@@ -3,37 +3,37 @@
 {% block content %}
 <div class="row">
     <div class="span12">
-        <h2>Instalación</h2>
-        <p>Para crear Freepto es necesario tener un sistema Linux y instalar el programa makefreepto.</p>
-        <p>Dentro Freepto esto programa es ya incluido, y puede ser útil si quieres crear una nueva Freepto para otra persona. También desde otro sistema operativo es posible bajarlo y instalarlo.</p>
-        <p>De momento esta operación no es muy sencilla, así que si tienes dudas te aconsejamos pedir ayuda a quien sabe algo más.</p>
-        <p>Per empezar la instalación puedes seguir la <a href="https://we.riseup.net/avana/freepto-docs-s#crear-una-nueva-freepto">documentación</a>.</p>
+        <h2>Instalaci&oacute;n</h2>
+        <p>Para instalar Freepto es necesario tener instalada la aplicaci&oacute;n makefreepto.</p>
+	<p>Esta aplicación está incluída dentro de Freepto y puede ser &uacute;til si quieres crear una nueva Freepto para otra persona.</p>
+	<p>Pera empezar la instalaci&oacute;n sigue los pasos descritos en la <a href="https://we.riseup.net/avana/freepto-docs-es#crear-una-nueva-freepto">documentación</a>.</p>
+	<p>De momento esta operaci&oacute;n no es muy sencilla, as&iacute; que si tienes dudas te aconsejamos pedir ayuda a quien sepa algo m&aacute;s o a trav&eacute;s de nuestro canal de <a href="/es/contactos/">IRC</a>.</p>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="span12">
         <h2>Arrancar Freepto</h2>
-        <h3>1. Configurar el boot</h3>
-        <p>Para arrancar Freepto es necesario configurar el propio BIOS para efectuar el boot desde USB.</p>
-        <p>Para selecionar el boot desde USB, justo después de encender el ordenador, pulsar la tecla ESC: esto hará aparecer un panel de selección del dispositivo del boot. Selecciona el pincho USB.</p>
-        <p>Si esto no funcionaría, se deberá acceder al BIOS: usualmente es suficiente al arranque del ordenador pulsar las teclas ESC, F2, SUPR o F10. Desafortunadamente es imposible indicar una proceso que sea valido para todos los casos, porque el menú del BIOS puede ser diferente por cada modelo de ordenador. Así que en casos de problemas aconsejamos buscar en Internet el proceso, poniendo “boot usb” seguido con el modelo / marca de tu ordenador. Una vez configurado el BIOS con el arranque USB, tienes que reiniciar el ordenador y esperar que Freepto se arranque.</p>
-        <p>Si todo va bien deberías ver algo así en la pantalla:</p>
+        <h3>1. Configurar el arranque</h3>
+        <p>Para arrancar Freepto es necesario que la BIOS del ordenador est&eacute; configurada para poder efectuar el arranque (boot) desde USB.</p>
+        <p>Para selecionar el arranque desde USB pulsa la tecla ESC justo despu&ecute;s de encender el ordenador. Esto har&aacute; aparecer el men&uacute; de selecci&oacute;n del dispositivo de arranque. Selecciona entonces la memoria USB.</p>
+        <p>Si esto no funciona, accede al BIOS: normalmente es suficiente con pulsar las teclas ESC, F2, SUPR o F10 justo despu&ecute;s de arrancar el ordenador. Desafortunadamente no es posible indicar un proceso que sea v&aacute;lido para todos los casos, porque el men&uacute; de la BIOS puede ser diferente para cada modelo de ordenador. As&iacute; que si tienes dificultades para acceder a la BIOS, te aconsejamos que busques en Internet “boot usb” seguido del modelo/marca de tu ordenador. Una vez configurada la BIOS con el arranque USB, tienes que reiniciar el ordenador y esperar a que Freepto se arranque autom&aacute;ticamente.</p>
+        <p>Si todo va bien ver&aacute;s algo as&iacute; en la pantalla:</p>
         <p><img src="https://we.riseup.net/assets/161470/boot.png" /></p>
-        <h3>2. Arrancar el sistema cifrato</h3>
-        <p>Durante el proceso de boot de Freepto, te será pedido de insertar la passphrase para desbloquear la persistencia cifrada, con un texto como esto:</p>
+        <h3>2. Arrancar el sistema cifrado</h3>
+        <p>Durante el proceso de arranque de Freepto te pedirá insertar la contraseña para desbloquear la persistencia cifrada, con un texto como &eacute;ste:</p>
         <p><img src="https://we.riseup.net/assets/134431/luks-pass_large.png" /></p>
-        <p>Es posible ignorar esta petición y arrancar Freepto en modalidad live. De esta manera cualquiera modificación hecha durante el utilizo de Freepto será perdida al siguiente reinicio.</p>
-        <p>Montando la persistencia es posible guardad los documentos creados y llevárselos en un sistema seguro y cifrado.</p>
-        <p>Si no recuerdas la contraseña, o no quieres insertarla porque el ambiente no es fiable (por ejemplo hay cámaras de seguridad) puedes evitar de poner la contraseña y el sistema se arrancará igual pero en modalidad “live”: no verás tus datos guardados ni podrás guardar otros nuevos. Pero podrás utilizar el sistema de base sin problemas.</p>
+        <p>Si ignoras esta petici&oacute;n de contraseña, Freepto se iniciar&aacute; en modalidad “live”. De esta manera, cualquier modificación hecha durante la utilización de Freepto se perder&aacute; al apagar o reiniciar el ordenador.</p>
+        <p>Si montas la persistencia, introduciendo la contraseña, podr&aacute;s guardar en la memoria USB los documentos que crees y llev&aacute;rtelos en un sistema seguro y cifrado.</p>
+        <p>Si no recuerdas la contraseña o no quieres introducirla porque el ambiente no es fiable (por ejemplo hay c&aacute;maras de seguridad) puedes no poner la contraseña y el sistema se arrancar&aacute; en modalidad “live”: no ver&aacute;s tus datos guardados anteriormente ni podr&aacute;s guardar de forma persistente en la memoria USB los datos que crees, pero podr&aacute;s utilizar el sistema sin problemas.</p>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="span12">
-        <h2>Como usar Freepto</h2>
-        <p>En el clasico menú de las aplicaciones hemos querido poner en evidencia las aplicaciones mas “particolari” para tutelar tu seguridad en un menú dedicado.</p>
-        <p>Entre estas aplicaciones hay para herramientas para la navegación anonima, para limpiar los ficheros temporaneos y para cifrar. La descripción de estos programas la puedes ver en la <a href="https://we.riseup.net/avana/freepto-docs-es#herramienta-instalada">documentación</a>.</p>
+        <h2>C&oacute;mo usar Freepto</h2>
+        <p>En el cl&aacute;sico men&uacute; aplicaciones hemos querido dar &eacute;nfasis a las aplicaciones espec&iacute;ficas para tutelar tu seguridad, agrup&aacute;ndolas en un men&uacute; dedicado.</p>
+        <p>Entre estas aplicaciones encontrarás herramientas para la navegaci&oacute;n an&oacute;nima, limpiar archivos temporales o el cifrado de documentos. Puedes ver la descripci&oacute;n de estos programas en la <a href="https://we.riseup.net/avana/freepto-docs-es#herramienta-instalada">documentaci&oacute;n</a>.</p>
     </div>
 </div>
 {% endblock %}

@@ -18,18 +18,22 @@ def page_index():
 def page():
     yield {'lang':'it', 'title':'usa_freepto'}
     yield {'lang':'it', 'title':'contatti'}
-    yield {'lang':'it', 'title':'faq'}
     yield {'lang':'it', 'title':'dev-team'}
     yield {'lang':'it', 'title':'doc-team'}
     yield {'lang':'it', 'title':'testing-team'}
+    yield {'lang':'it', 'title':'eventi'}
+    yield {'lang':'it', 'title':'download'}
+    yield {'lang':'it', 'title':'news'}
 
     yield {'lang':'es', 'title':'usa_freepto'}
     yield {'lang':'es', 'title':'contactos'}
-    yield {'lang':'es', 'title':'faq'}
     yield {'lang':'es', 'title':'dev-team'}
     yield {'lang':'es', 'title':'doc-team'}
     yield {'lang':'es', 'title':'testing-team'}
-
+    yield {'lang':'es', 'title':'eventos'}
+    yield {'lang':'es', 'title':'noticias'}
+    yield {'lang':'es', 'title':'descargas'}
+    
 @manager.command
 def freeze():
     freezer.freeze()

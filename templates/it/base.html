@@ -20,8 +20,10 @@
                                     <li><a href="/it/doc-team/">Doc Team</a></li>
                                 </ul>
                             </li>
+                            <li{% if actived == 'events' %} class="active"{% endif %}><a href="/it/eventi/">Eventi</a></li>
                             <li{% if actived == 'contacts' %} class="active"{% endif %}><a href="/it/contatti/">Contatti</a></li>
-<!--                            <li{% if actived == 'faq' %} class="active"{% endif %}><a href="/it/faq/">Faq</a></li> -->
+                            <li{% if actived == 'news' %} class="active"{% endif %}><a href="/it/news/">News</a></li>
+                            <li{% if actived == 'download' %} class="active"{% endif %}><a href="/it/download/">Download</a></li> 
                         </ul>
                         <ul class="nav pull-right">
                             <li class="active"><a href="/it/">Italiano</a></li>
@@ -39,7 +41,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>AvANa | Freepto 0.1.1 – Home</title>
+        <title>Freepto 0.1.2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -68,7 +70,7 @@
 
             <hr>
             <footer>
-            <p><a href="http://freepto.mx/">Freepto</a> | No Copyright | <a href="http://www.inventati.org/"><img src="{{ url_for('static', filename='files/icon-hostedby.png') }}"></a></p>
+            <p><a href="https://www.freepto.mx/">Freepto</a> | No Copyright | <a href="http://www.inventati.org/"><img src="{{ url_for('static', filename='files/icon-hostedby.png') }}"></a></p>
             </footer>
         </div>
 
