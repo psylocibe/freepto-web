@@ -2,3 +2,6 @@ virtualenv
 env
 app.pyc
 build
+*~
+.*.swp
+.*.swo
