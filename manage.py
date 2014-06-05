@@ -13,6 +13,7 @@ def index():
 def page_index():
     yield {'lang':'it'}
     yield {'lang':'es'}
+    yield {'lang':'en'}
 
 @freezer.register_generator
 def page():
@@ -34,6 +35,13 @@ def page():
     yield {'lang':'es', 'title':'noticias'}
     yield {'lang':'es', 'title':'descargas'}
 
+    yield {'lang':'en', 'title':'get-started'}
+    yield {'lang':'en', 'title':'get-in-touch'}
+    yield {'lang':'en', 'title':'dev-team'}
+    yield {'lang':'en', 'title':'doc-team'}
+    yield {'lang':'en', 'title':'testing-team'}
+    yield {'lang':'en', 'title':'events'}
+    yield {'lang':'en', 'title':'download'}
     yield {'lang':'en', 'title':'news'}
 
 @manager.command

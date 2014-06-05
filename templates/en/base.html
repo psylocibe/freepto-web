@@ -10,24 +10,24 @@
                     </a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li{% if actived == 'home' %} class="active"{% endif %}><a href="/es/">Home</a></li>
-                            <li{% if actived == 'use' %} class="active"{% endif %}><a href="/es/usa_freepto/">Usa freepto</a></li>
+                            <li{% if actived == 'home' %} class="active"{% endif %}><a href="/en/">Home</a></li>
+                            <li{% if actived == 'use' %} class="active"{% endif %}><a href="/en/get-started/">Get started</a></li>
                             <li class="dropdown{% if actived == 'contrib' %} active{% endif %}">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribuye</a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribute</a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/es/dev-team/">Dev Team</a></li>
-                                    <li><a href="/es/testing-team/">Testing Team</a></li>
-                                    <li><a href="/es/doc-team/">Doc Team</a></li>
+                                    <li><a href="/en/dev-team/">Dev Team</a></li>
+                                    <li><a href="/en/testing-team/">Testing Team</a></li>
+                                    <li><a href="/en/doc-team/">Doc Team</a></li>
                                 </ul>
                             </li>
-                            <li{% if actived == 'events' %} class="active"{% endif %}><a href="/es/eventos/">Eventos</a></li>
-                            <li{% if actived == 'contacts' %} class="active"{% endif %}><a href="/es/contactos/">Contacto</a></li>
-                            <li{% if actived == 'news' %} class="active"{% endif %}><a href="/es/noticias/">Noticias</a></li>
-                            <li{% if actived == 'download' %} class="active"{% endif %}><a href="/es/descargas/">Descargas</a></li> 
+                            <li{% if actived == 'events' %} class="active"{% endif %}><a href="/en/events/">Events</a></li>
+                            <li{% if actived == 'contacts' %} class="active"{% endif %}><a href="/en/get-in-touch/">Get in touch</a></li>
+                            <li{% if actived == 'news' %} class="active"{% endif %}><a href="/en/news/">News</a></li>
+                            <li{% if actived == 'download' %} class="active"{% endif %}><a href="/en/download/">Download</a></li> 
                         </ul>
                         <ul class="nav pull-right">
-                            <li><a href="/it/">Italiano</a></li>
-                            <li class="active"><a href="/es/">Castellano</a></li>
+                            <li class="active"><a href="/it/">Italiano</a></li>
+                            <li><a href="/es/">Castellano</a></li>
                             <li><a href="/en/">English</a></li>
                         </ul>
                     </div><!--collapse-->
@@ -38,11 +38,11 @@
 
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta charset="utf-8">
-        <title>AvANa | Freepto 0.1.1 – Home</title>
+        <title>Freepto 0.1.2</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -71,7 +71,7 @@
 
             <hr>
             <footer>
-            <p><a href="http://freepto.mx/">Freepto</a> | No Copyright | <a href="http://www.inventati.org/"><img src="{{ url_for('static', filename='files/icon-hostedby.png') }}"></a></p>
+            <p><a href="https://www.freepto.mx/">Freepto</a> | No Copyright | <a href="http://www.inventati.org/"><img src="{{ url_for('static', filename='files/icon-hostedby.png') }}"></a></p>
             </footer>
         </div>
 
