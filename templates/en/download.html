@@ -1,38 +1,38 @@
-{% extends "it/base.html" %}
+{% extends "en/base.html" %}
 {% block menu %}{{ menu('download') }}{% endblock %}
 {% block content %}
 <div class="row">
     <div class="span12">
-        <h2>Scarica</h2>
-        <p><em>A partire da questo link puoi scaricare l'ultima versione di Freepto e scegliere se scaricarla via HTTP o Torrent:</em></p>
-        <p><a href="http://download.freepto.mx">http://download.freepto.mx</a>
+        <h2>Download</h2>
+        <p><em>Click the link below to download the latest version of Freepto. You can choose whether to download it over HTTP or Torrent protocol.</em></p>
+        <p><a href="http://download.freepto.mx/">http://download.freepto.mx/</a>
 
-        <h2>Verifica</h2>
-        <p>E' possibile verificare la validità e l'autenticità dell'immagine scaricata in pochi semplici passaggi:</p>
+        <h2>Verify</h2>
+        <p>You can easily verufy that the image you downloaded is valid and authentic:</p>
         <ul>
-            <li><strong>Scarica la nostra chiave GPG pubblica:</strong></li>
+            <li><strong>Download our public GPG key:</strong></li>
             <p><code>gpg --search-key 364B68D4</code></p>
                 
-            <li><strong>Verifica il fingerprint della chiave:</strong></li>
-            <p><em>Questo passaggio e' necessario per assicurarti che la chiave gpg scaricata sia la nostra</em></p>
-                <p>Verifica che il fingerprint mostrato dal seguente comando,</p>
+            <li><strong>Verifying the key fingerprint:</strong></li>
+            <p><em>Make sure you downloaded a genuine copy of our GPG key</em></p>
+                <p>Verify that the fingerprint printed out by this command</p>
                 <p><code>gpg --fingerprint 364B68D4</code></p>
-                <p>sia uguale a quello mostrato di seguito:</p>
+                <p>is the same as below:</p>
                 <p><code>Key fingerprint = C355 97C8 7BE0 8D11 A5D8  4087 909C 6C75 364B 68D4</code></p>
 
-            <li><strong>Verifica l'hash dell'immagine</strong></li>
-            <p><em>Questo passaggio ti permette di verificare che l'immagine scaricata non sia stata corrotta in fase di download</em></p>
-                <p>Esegui i seguenti comandi e verifica che l'output sia identico per entrambi:</p>
+            <li><strong>Verifying the hash code of the image</strong></li>
+                <p><em>This step enables you to check that the image you downloaded is not corrupt</em></p>
+                <p>Make sure the outputs of the commands below is identical:</p>
                 <p><code>sha512sum freepto-X.X.X.img</code></p>
                 <p><code>cat freepto-X.X:X.img.sha512sum.txt</code></p>
 
-            <li><strong>Verifica la firma dell'hash</strong></li>
-            <p><em>Questo passaggio permette di verificare che l'immagine che hai scaricato sia stata rilasciata da noi</em></p>
+            <li><strong>Verifying the hash signature</strong></li>
+                <p><em>This step enables you to check that the image you downloaded is authentic</em></p>
                 <p><code>gpg --keyid-format long --verify freepto-X.X.X.img.sha512sum.txt.sig</code></p>
         </ul>
 
-        <h2>Installa</h2>
-        <p><em>Segui la <a href="/it/usa_freepto">documentazione</a> per scoprire come installare Freepto</em></p>
+        <h2>Install</h2>
+        <p><em>Follow the <a href="/en/get-started/">documentation</a> to find out how to install Freepto.</em></p>
     </div>
 </div>
 {% endblock %}
