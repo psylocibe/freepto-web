@@ -3,39 +3,54 @@
 {% block content %}
 <div class="row">
     <div class="span12">
-        <h2>Installazione</h2>
-        <p>Per creare freepto, purtroppo, e’ necessario avere gia’ un sistema Linux a disposizione. E’ infatti necessario il programma makefreepto.</p>
-        <p>Dentro freepto questo programma e’ gia’ incluso e può tornarti utile nel caso volessi creare una nuova freepto per qualcuno/a. Anche da un altro sistema operativo, scaricarlo e’ semplicissimo.</p>
-        <p>Al momento questa operazione non è del tutto facile, e se avete dei dubbi vi invitiamo a chiedere un aiuto a chi ne sa di più.</p>
-        <p>Per iniziare l'installazione segui i passaggi della <a href="https://we.riseup.net/avana/freepto-docs#crea-un-nuova-freepto">documentazione</a>.</p>
+        <h2>Installation</h2>
+        <p>You'll need a Linux system already set-up to install freepto, and the program makefreepto.</p>
+        <p>This program ships with Freepto itself so that you always have it handy if you need to create a new freepto for someone. Downloading it is easy, even from another operating system.</p>
+        <p>At the moment, the installation process is a bit difficult. If you have any dounts, feel free to ask for help.</p>
+        <p>To begin, follow the steps in the <a href="https://we.riseup.net/avana/freepto-docs#crea-un-nuova-freepto">documentation</a>.</p>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="span12">
-        <h2>Avviare Freepto</h2>
-        <h3>1. Configurare il boot</h3>
+        <h2>Starting Freepto</h2>
+        <h3>1. Configuring the system boot</h3>
         <p>Per avviare freepto è necessario settare il proprio BIOS per effettuare il boot da USB.</p>
-        <p>Per selezionare il boot da USB, premere, subito dopo l’accensione del computer, il tasto ESC: questo dovrebbe far apparire un pannello di selezione del dispositivo di boot. Seleziona la penna usb!</p>
-        <p>Se questo non dovesse riuscire, si dovra’ accedere al BIOS: solitamente è sufficiente durante l’avvio del computer premere uno di questi tasti: ESC, F2, Canc o F10. Purtroppo è impossibile indicare una procedura valida per tutti i casi, perchè ovviamente il menu del BIOS è differente da modello a modello. Quindi, almeno in questo caso, Google è tuo amico: cerca, ad esempio “boot usb” seguito dal modello / marca del tuo computer. Configurato il BIOS per l’avvio da USB, puoi semplicemente riavviare ed aspettare che freepto venga avviata.</p>
-
+        <p>To start Freepto, you'll need to configure the BIOS of your machine so that it will boot from a USB device.</p>
+        <p>To select the USB boot, press the ESC key immediately after turning on your computer: a special screen should show up,
+            enabling you to change the boot device. Select to USB stick boot!</p>
+        <p>If the ESC key doesn't make this special screen show up, you will need to try with other keys, usually
+            F2, Del or F10. Unfortunately there are no one-fits-all instructions since the BIOS menu is different
+            for every computer model. Try googling the word "BIOS" followed by make and model of your computer. Once you'll
+            have configured the USB boot from the BIOS, you can just reboot your computer and wait for freepto to boot.</p>
+            
         <p>Se tutto va per il verso giusto vedrai una schermata simile a questa:</p>
+        <p>If the boot succeeds, you 'll see something like this:</p>
         <p><img src="/static/boot.png" /></p>
         <h3>2. Sbloccare il sistema cifrato</h3>
-        <p>Durante la fase di boot di freepto ti verrà chiesto di inserire una passphrase per sbloccare la persistenza cifrata, con una stringa come questa:</p>
+        <p>During the boot, you'll be asked a passphrase to unlock the encrypted storage:</p>
         <p><img src="/static/luks-pass.png" /></p>
-        <p>E’ possibile ignorare questa richiesta ed avviare freepto in modalità live, in questo modo però qualsiasi modifica fatta durante l’utilizzo di freepto verrà persa al successivo riavvio.</p>
-        <p>Montando la persistenza è invece possibile conservare i documenti creati e portarli con se in un sistema sicuro e cifrato.</p>
-        <p>Se non ricordi la password, o non vuoi inserirla perche’ l’ambiente non e’ fidato (ad esempio se ci sono telecamere) puoi evitare di mettere la password e il sistema si avviera’ ugualmente, ma in modalita’ <em>live</em>: non vedrai i tuoi dati salvati, ne’ potrai salvarne di nuovi. Potrai comunque usare il sistema di base senza problemi.</p>
+        <p>If you ignore this password prompt, Freepto will be booted in live mode. This means that any document you
+            save will be lot when you turn your computer off.</p>
+        <p>If you instead enable the encryted storage, you'll be able to store documents and carry them with you on an
+            encrypted USB drive.</p>
+        <p>If you don't remember your password, or if you just don't want to type it in because the environment
+            around you is not secure (for example, if there is CCTV around you), you can just not enter the password
+            and the system will be booted in live mode: you won't see any of your data, but you'll be able to use
+            a base Linux system anyway and without problems of any sort.</p>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="span12">
-        <h2>Guida all'uso</h2>
-        <p>Nel classico menu delle applicazioni abbiamo voluto mettere in evidenza quelle piu’ “particolari” per la tutela della sicurezza con un menu dedicato chiamato non a caso <strong>"paranoia"</strong>.</p>
-        <p>Tra di esse ci sono strumenti per la navigazione anonima, strumenti per la pulizia dei file temporanei, strumenti di cifratura. Per l'elenco completo dei tools installati puoi fare riferimento a <a href="https://we.riseup.net/avana/freepto-docs#tools-installati">questa pagina</a></p>
-        <p> <strong>La documentazione completa</strong> è disponibile a questa pagina: <a href="https://we.riseup.net/avana/freepto-docs">we.riseup.net/avana/freepto-docs</a></p>
+        <h2>Manual</h2>
+        <p>We've highlighted the most important applications for safeguarding your security in the application menu. You'll
+            find them under the "paranoia" submenu.</p>
+        <p>Here you will find tools for anonymous internet browsing, tools for secure deleting of temporary files and
+            encryption tools. For a complete list of the tools, refer to 
+            <a href="https://we.riseup.net/avana/freepto-docs#tools-installati">this page</a></p>
+        <p> The <strong>completa documentation</strong> is available at:
+            <a href="https://we.riseup.net/avana/freepto-docs">we.riseup.net/avana/freepto-docs</a></p>
         <p><img src="/static/desktop.png"></p>
     </div>
 </div>
