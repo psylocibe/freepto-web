@@ -1,21 +1,29 @@
 freepto-web
 ===========
 
-Flask scripts for Freepto web page.
+Flask scripts for Freepto's website.
 
-Generate html
-=============
+HTML generation
+===============
 
-Just use this command to generate html. Files will be created in the 'build' subdirectory.
+To generate the HTML for the website, use this command:
 
-create virtualenv:
-> virtualenv env
+    make all
 
-activate:
-> source env/bin/activate
+HTML generation (manual mode)
+=============================
+You shouldn't need to do this, but if for some reason you cannot use `make` or if it is broken, then you can build the HTML manually.
 
-install requirements:
-> pip install -r requirements.txt
+Static HTML files will be created in the `build` subdirectory.
 
-freeze new version:
-> python manage.py freeze
+    # create virtualenv:
+    virtualenv env
+    
+    # activate:
+    source env/bin/activate
+    
+    # install requirements:
+    pip install -r requirements.txt
+    
+    # freeze new version:
+    python manage.py freeze
