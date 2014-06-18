@@ -1,9 +1,9 @@
 import os
 
-lang_dirs = [d for d in
+lang_dirs = sorted((d for d in
         os.listdir('templates/') if
         os.path.isdir(os.path.join('templates/', d))
-        ]
+        ))
 
 def find_pages(lang):
     base = os.path.join('templates', lang)
