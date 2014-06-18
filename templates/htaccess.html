@@ -1,0 +1,9 @@
+RewriteEngine on
+###Languages
+{% for dir, lang in languages %}
+RewriteCond %{HTTP:Accept-Language} {{lang}} [NC]
+RewriteRule ^$ /{{dir}}/ [R]
+{% endfor %}
+## Default language: {{default_dir}}
+RewriteRule ^$ /{{default_dir}}/ [R]
+

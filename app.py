@@ -17,6 +17,13 @@ def page_index(lang):
 def page(lang, title):
     return render(lang, title)
 
+@app.route('/.htaccess')
+def htaccess():
+    return render_template('htaccess.html',
+            languages=(('it', 'it'), ('es', 'es')),
+            default_dir='en'
+            )
+
 def render(lang, title):
     template = "%s/%s.html" % (lang, title)
     return render_template(template)
