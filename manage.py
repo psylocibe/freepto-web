@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from flask.ext.script import Manager
 from flask_frozen import Freezer
 from app import app

@@ -27,3 +27,16 @@ Static HTML files will be created in the `build` subdirectory.
     
     # freeze new version:
     python manage.py freeze
+
+Browse
+======
+
+Unfortunately, a simple `firefox build/index.html` won't work.
+You need to do
+
+```sh
+cd build
+python2 -m SimpleHTTPServer
+```
+
+then point your browser to http://localhost:8000/
