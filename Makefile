@@ -7,7 +7,7 @@ cleanvenv:
 venv: venv/bin/python
 
 venv/bin/python: requirements.txt
-	test -f $@ || virtualenv2 --no-site-packages venv
+	test -f $@ || virtualenv --no-site-packages venv
 	./venv/bin/pip install -Ur requirements.txt
 
 build: venv manage.py app.py discovery.py $(shell find templates/ static/ -type f)
