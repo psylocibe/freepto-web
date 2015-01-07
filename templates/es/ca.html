@@ -1,0 +1,40 @@
+{% extends "it/base.html" %}
+{% block menu %}{{ menu('ca') }}{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="span12">
+        <h2>Descargar</h2>
+        <p><em>Para verificar con seguirdad la intentidad de los servicios ofrecidos por Freepto, tienes que bajar e instalar la nuestra CA en tu ordenador.</em></p>
+        <p><code>wget http://ca.freepto.mx/ca.pem</code></p>
+
+        <h2>Verificar</h2>
+        <p>Es muy recomendado verificar la autenticidad del certificado descargado. Es posible hacerlo en simples pasos:</p>
+        <ul>
+            <li><strong>Baja nuestra clave GPG:</strong></li>
+            <p><code>gpg --search-key 364B68D4</code></p>
+
+            <li><strong>Verifica la huella digital de la clave:</strong></li>
+            <p><em>Este paso es necesario para asegurarte que la clave gpg descargada sea efectivamente la nuestra</em></p>
+                <p>Verifica que la huella digital que te muestra este comando,</p>
+                <p><code>gpg --fingerprint 364B68D4</code></p>
+                <p>es el mismo que est&aacute; aqu&iacute;:</p>
+                <p><code>Key fingerprint = C355 97C8 7BE0 8D11 A5D8  4087 909C 6C75 364B 68D4</code></p>
+
+            <li><strong>Verifica el certificato:</strong></li>
+                <p>Descarga la signature del certificado:</p>
+                <p><code>wget http://ca.freepto.mx/ca.pem.sig</code></p>
+                <p>Ahora verifica el certificado usando gpg:</p>
+                <p><code>$ gpg --verify ca.pem.sig ca.pem<br />
+                   gpg: Signature made Mon 03 Nov 2014 23:45:25 GMT using RSA key ID 364B68D4<br />
+                   gpg: Good signature from "Freepto Repository <deb@freepto.mx>"</code></p>
+        </ul>
+
+        <h2>Instalaci&oacute;n</h2>
+        <p>Para instalar el certificado en tu ordenador, sigue estos pasos:</p>
+        <p><code>$ sudo -s<br />
+        # apt-get install ca-certificates<br />
+        # wget -O /usr/local/share/ca-certificates/freepto.pem http://ca.freepto.mx/ca.pem<br />
+        # update-ca-certificates</code></p>
+    </div>
+</div>
+{% endblock %}
