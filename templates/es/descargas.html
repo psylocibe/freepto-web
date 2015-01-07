@@ -6,13 +6,13 @@
     <div class="span12">
         <h2>Descarga</h2>
         <table class="table">
-        <tr><th>Idioma</th><th width="20%">Fichero IMG</th><th width="30%">SHA512sum</th><th width="30%">SHA512sum.sig</th></tr>
+        <tr><th>Idioma</th><th width="20%">Fichero IMG</th><th width="30%">SHA512sum</th><th width="30%">Firma del SHA512sum</th></tr>
         {% for locale, data in images.iteritems() %}
 	<tr>
             <td>{{ locale }}</td>
             <td><a href="{{ data['http_download'] }}">Descarga por HTTP</a><br /><a href="{{ data['torrent_download'] }}">Descarga por Torrent</a></td>
             <td><p style="max-width: 300px; word-wrap:break-word;">{{ data['sha512'] }}</p></td>
-            <td><a href="{{ data['sha512sig'] }}">Descarga la signature del SHA512sum</a></p></td>
+            <td><a href="{{ data['sha512sig'] }}">Descarga la firma</a></p></td>
         </tr>
         {% endfor %}
         </table>
@@ -32,12 +32,12 @@
 
             <li><strong>Verificar el hash del fichero</strong></li>
             <p><em>Este paso te permite verificar que el fichero bajado no haya sido sido corrumpido en el paso de descarga</em></p>
-                <p>Ejecutas los siguientes comandos y verifica que el output sea el mismo para los dos:</p>
+                <p>Ejecutas el siguiente comando y verifica que el output sea el mismo del texto de la columna SHA512sum:</p>
                 <p><code>sha1sum freepto-X.X.X.img</code></p>
-                <p><code>cat freepto-X.X:X.img.sha1sum</code></p>
 
             <li><strong>Verifica la firma del hash</strong></li>
             <p><em>Este paso permite verificar que el fichero que has bajado sea el mismo publicado por nosotros</em></p>
+                <p>Descarga la firma del SHA512sum y ejecuta el siguente comando:</p>
                 <p><code>gpg --keyid-format long --verify freepto-X.X.X.img.sha1sum.sig</code></p>
         </ul>
 

@@ -39,7 +39,6 @@ def get_images_data():
 
     latest = requests.get(base_url)
     if latest.status_code != 200:
-	print 'error'
         raise Exception('Can\'t download http://download.freepto.mx/latest/')
 
     latest_text = latest.text.replace('\n', '')
@@ -50,7 +49,6 @@ def get_images_data():
         sha512_url = '%s/%s/%s.sha512sum.txt' % (base_url, locale, locale)
         sha512 = requests.get(sha512_url)
         if sha512.status_code != 200:
-            print 'error2'
             raise Exception('Can\'t download %s' % sha512_url)
 
         images_data[locale] = {
