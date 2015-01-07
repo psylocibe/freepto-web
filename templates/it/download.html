@@ -1,11 +1,22 @@
 {% extends "it/base.html" %}
 {% block menu %}{{ menu('download') }}{% endblock %}
 {% block content %}
+{% set images = get_images_data() %}
 <div class="row">
     <div class="span12">
         <h2>Scarica</h2>
-        <p><em>A partire da questo link puoi scaricare l'ultima versione di Freepto e scegliere se scaricarla via HTTP o Torrent:</em></p>
-        <p><a href="http://download.freepto.mx/latest">http://download.freepto.mx/latest</a>
+        <table class="table">
+        <tr><th>Lingua</th><th width="20%">File IMG</th><th width="30%">SHA512sum</th><th width="30%">Firma del SHA512sum</th></tr>
+        {% for locale, data in images.iteritems() %}
+	<tr>
+            <td>{{ locale }}</td>
+            <td><a href="{{ data['http_download'] }}">Scarica via HTTP</a><br /><a href="{{ data['torrent_download'] }}">Scarica via Torrent</a></td>
+            <td><p style="max-width: 300px; word-wrap:break-word;">{{ data['sha512'] }}</p></td>
+            <td><a href="{{ data['sha512sig'] }}">Scarica la firma</a></p></td>
+        </tr>
+        {% endfor %}
+        </table>
+
 
         <h2>Verifica</h2>
         <p>E' possibile verificare la validità e l'autenticità dell'immagine scaricata in pochi semplici passaggi:</p>
@@ -22,17 +33,17 @@
 
             <li><strong>Verifica l'hash dell'immagine</strong></li>
             <p><em>Questo passaggio ti permette di verificare che l'immagine scaricata non sia stata corrotta in fase di download</em></p>
-                <p>Esegui i seguenti comandi e verifica che l'output sia identico per entrambi:</p>
+                <p>Esegui il seguente comando e verifica che l'output sia identico al testo della colonna SHA512sum:</p>
                 <p><code>sha512sum freepto-X.X.X.img</code></p>
-                <p><code>cat freepto-X.X:X.img.sha512sum.txt</code></p>
 
             <li><strong>Verifica la firma dell'hash</strong></li>
             <p><em>Questo passaggio permette di verificare che l'immagine che hai scaricato sia stata rilasciata da noi</em></p>
+                <p>Scarica la firma del SHA512sum ed esegui il seguente comando:</p>
                 <p><code>gpg --keyid-format long --verify freepto-X.X.X.img.sha512sum.txt.sig</code></p>
         </ul>
 
         <h2>Installa</h2>
-        <p><em>Segui la <a href="/it/usa_freepto">documentazione</a> per scoprire come installare Freepto</em></p>
+        <p><em>Segui la <a href="/it/usa_freepto/">documentazione</a> per scoprire come installare Freepto</em></p>
     </div>
 </div>
 {% endblock %}
