@@ -1,11 +1,21 @@
 {% extends "es/base.html" %}
 {% block menu %}{{ menu('download') }}{% endblock %}
 {% block content %}
+{% set images = get_images_data() %}
 <div class="row">
     <div class="span12">
         <h2>Descarga</h2>
-        <p><em>A partir de este elnace puedes descargar la &uacute;ltima versión de Freepto y elegir si bajarla via HTTP o Torrent:</em></p>
-        <p><a href="http://download.freepto.mx/latest/">http://download.freepto.mx/latest/</a>
+        <table class="table">
+        <tr><th>Idioma</th><th width="20%">Fichero IMG</th><th width="30%">SHA512sum</th><th width="30%">SHA512sum.sig</th></tr>
+        {% for locale, data in images.iteritems() %}
+	<tr>
+            <td>{{ locale }}</td>
+            <td><a href="{{ data['http_download'] }}">Descarga por HTTP</a><br /><a href="{{ data['torrent_download'] }}">Descarga por Torrent</a></td>
+            <td><p style="max-width: 300px; word-wrap:break-word;">{{ data['sha512'] }}</p></td>
+            <td><a href="{{ data['sha512sig'] }}">Descarga la signature del SHA512sum</a></p></td>
+        </tr>
+        {% endfor %}
+        </table>
 
         <h2>Verificar</h2>
         <p>Puedes verificar la integridad y la autenticidad del fichero bajado en pocos simples pasos:</p>
