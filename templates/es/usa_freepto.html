@@ -6,7 +6,7 @@
         <h2>Instalaci&oacute;n</h2>
         <p>Para instalar Freepto es necesario tener instalada la aplicaci&oacute;n makefreepto.</p>
 	<p>Esta aplicación está incluída dentro de Freepto y puede ser &uacute;til si quieres crear una nueva Freepto para otra persona.</p>
-	<p>Pera empezar la instalaci&oacute;n sigue los pasos descritos en la <a href="https://we.riseup.net/avana/freepto-docs-es#crear-una-nueva-freepto">documentación</a>.</p>
+	<p>Pera empezar la instalaci&oacute;n sigue los pasos descritos en la <a href="https://we.riseup.net/freepto-wiki/freepto-docs-es#2-identifica-el-nuevo-soporte-usb">documentación</a>.</p>
 	<p>De momento esta operaci&oacute;n no es muy sencilla, as&iacute; que si tienes dudas te aconsejamos pedir ayuda a quien sepa algo m&aacute;s o a trav&eacute;s de nuestro canal de <a href="/es/contactos/">IRC</a>.</p>
     </div>
 </div>
@@ -19,7 +19,7 @@
         <p>Para selecionar el arranque desde USB pulsa la tecla ESC justo despu&ecute;s de encender el ordenador. Esto har&aacute; aparecer el men&uacute; de selecci&oacute;n del dispositivo de arranque. Selecciona entonces la memoria USB.</p>
         <p>Si esto no funciona, accede al BIOS: normalmente es suficiente con pulsar las teclas ESC, F2, SUPR o F10 justo despu&ecute;s de arrancar el ordenador. Desafortunadamente no es posible indicar un proceso que sea v&aacute;lido para todos los casos, porque el men&uacute; de la BIOS puede ser diferente para cada modelo de ordenador. As&iacute; que si tienes dificultades para acceder a la BIOS, te aconsejamos que busques en Internet “boot usb” seguido del modelo/marca de tu ordenador. Una vez configurada la BIOS con el arranque USB, tienes que reiniciar el ordenador y esperar a que Freepto se arranque autom&aacute;ticamente.</p>
         <p>Si todo va bien ver&aacute;s algo as&iacute; en la pantalla:</p>
-        <p><img src="https://we.riseup.net/assets/161470/boot.png" /></p>
+        <p><img src="{{ url_for('static', filename='syslinux-berenjena.png') }}" /></p>
         <h3>2. Arrancar el sistema cifrado</h3>
         <p>Durante el proceso de arranque de Freepto te pedirá insertar la contraseña para desbloquear la persistencia cifrada, con un texto como &eacute;ste:</p>
         <p><img src="https://we.riseup.net/assets/134431/luks-pass_large.png" /></p>
