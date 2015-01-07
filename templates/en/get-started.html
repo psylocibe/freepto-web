@@ -7,7 +7,7 @@
         <p>You'll need a Linux system already set-up to install freepto, and the program makefreepto.</p>
         <p>This program ships with Freepto itself so that you always have it handy if you need to create a new freepto for someone. Downloading it is easy, even from another operating system.</p>
         <p>At the moment, the installation process is a bit difficult. If you have any dounts, feel free to ask for help.</p>
-        <p>To begin, follow the steps in the <a href="https://we.riseup.net/avana/freepto-docs#crea-un-nuova-freepto">documentation</a>.</p>
+        <p>To begin, follow the steps in the <a href="https://we.riseup.net/freepto-wiki/freepto-docs-en#creating-a-freepto-usb-stick">documentation</a>.</p>
     </div>
 </div>
 <hr>
@@ -26,8 +26,8 @@
             
         <p>Se tutto va per il verso giusto vedrai una schermata simile a questa:</p>
         <p>If the boot succeeds, you 'll see something like this:</p>
-        <p><img src="/static/boot.png" /></p>
-        <h3>2. Sbloccare il sistema cifrato</h3>
+        <p><img src="{{ url_for('static', filename='syslinux-berenjena.png') }}" /></p>
+        <h3>2. Unlock the crypted storage</h3>
         <p>During the boot, you'll be asked a passphrase to unlock the encrypted storage:</p>
         <p><img src="/static/luks-pass.png" /></p>
         <p>If you ignore this password prompt, Freepto will be booted in live mode. This means that any document you
@@ -48,10 +48,10 @@
             find them under the "paranoia" submenu.</p>
         <p>Here you will find tools for anonymous internet browsing, tools for secure deleting of temporary files and
             encryption tools. For a complete list of the tools, refer to 
-            <a href="https://we.riseup.net/avana/freepto-docs#tools-installati">this page</a></p>
-        <p> The <strong>completa documentation</strong> is available at:
-            <a href="https://we.riseup.net/avana/freepto-docs">we.riseup.net/avana/freepto-docs</a></p>
-        <p><img src="/static/desktop.png"></p>
+            <a href="https://we.riseup.net/freepto-wiki/freepto-docs-en#paranoia-tools">this page</a></p>
+        <p> The <strong>complete documentation</strong> is available at:
+            <a href="https://we.riseup.net/freepto-wiki/freepto-docs-en">https://we.riseup.net/freepto-wiki/freepto-docs-en</a></p>
+        <p><img src="{{ url_for('static', filename='paranoiatools.png') }}"></p>
     </div>
 </div>
 {% endblock %}
