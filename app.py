@@ -54,7 +54,7 @@ def get_images_data():
         images_data[locale] = {
             'http_download': '%s%s/%s.img' % (base_url, locale, locale),
             'torrent_download': '%s%s/%s.torrent' % (base_url, locale, locale),
-            'sha512': sha512.text,
+            'sha512': sha512.text.split()[0],
             'sha512sig': sha512_url + '.sig'
         }
     return images_data
