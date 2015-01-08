@@ -1,9 +1,10 @@
 import os
 
 lang_dirs = sorted((d for d in
-        os.listdir('templates/') if
-        os.path.isdir(os.path.join('templates/', d))
-        ))
+                    os.listdir('templates/') if
+                    os.path.isdir(os.path.join('templates/', d))
+                    ))
+
 
 def find_pages(lang):
     base = os.path.join('templates', lang)
@@ -14,3 +15,9 @@ def find_pages(lang):
             continue
         yield os.path.splitext(f)[0]
 
+
+if __name__ == '__main__':
+    print 'languages:', lang_dirs
+    for lang in lang_dirs:
+        print '==== %s ====' % lang
+        print '\n'.join(find_pages(lang))
