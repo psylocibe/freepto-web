@@ -10,7 +10,10 @@
         {% for locale, data in images.iteritems() %}
 	<tr>
             <td>{{ locale }}</td>
-            <td><a href="{{ data['http_download'] }}">Scarica via HTTP</a><br /><a href="{{ data['torrent_download'] }}">Scarica via Torrent</a></td>
+            <td>
+                <a href="{{ data['http_download'] }}">Scarica via HTTP</a>
+                <!-- <br /><a href="{{ data['torrent_download'] }}">Scarica via Torrent</a> -->
+            </td>
             <td><p style="max-width: 300px; word-wrap:break-word;">{{ data['sha512'] }}</p></td>
             <td><a href="{{ data['sha512sig'] }}">Scarica la firma</a></p></td>
         </tr>

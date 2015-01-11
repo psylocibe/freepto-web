@@ -42,7 +42,7 @@ def get_images_data():
         raise Exception('Can\'t download http://download.freepto.mx/latest/')
 
     latest_text = latest.text.replace('\n', '')
-    locales = re.findall('(freepto-[a-z]{2}_[A-Z]{2}_[\-0-9\.]*)', latest_text)
+    locales = re.findall('(freepto-[\-0-9\.]*_[a-zA-Z]*)', latest_text)
 
     images_data = {}
     for locale in locales:
@@ -55,7 +55,7 @@ def get_images_data():
             'http_download': '%s%s/%s.img' % (base_url, locale, locale),
             'torrent_download': '%s%s/%s.torrent' % (base_url, locale, locale),
             'sha512': sha512.text.split()[0],
-            'sha512sig': sha512_url + '.sig'
+            'sha512sig': sha512_url + '.asc'
         }
     return images_data
 
