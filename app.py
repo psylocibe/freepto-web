@@ -2,6 +2,9 @@ from flask import Flask, render_template, Response
 from flask.ext.bootstrap import Bootstrap
 import re
 import requests
+import logging
+import functools
+log = logging.getLogger('freepto-web')
 
 from discovery import lang_dirs
 
@@ -9,33 +12,53 @@ app = Flask(__name__)
 app.config['DEBUG'] = True
 Bootstrap(app)
 
+
 @app.route('/')
 def index():
     return render('it', 'index')
+
 
 @app.route('/<lang>/')
 def page_index(lang):
     return render(lang, 'index')
 
+
 @app.route('/<lang>/<title>/')
 def page(lang, title):
     return render(lang, title)
 
+
 @app.route('/.htaccess')
 def htaccess():
-    DEFAULT='en'
+    DEFAULT = 'en'
     return Response(
         render_template('htaccess.html',
-                        languages=[(l,l) for l in lang_dirs if l != DEFAULT],
+                        languages=[(l, l) for l in lang_dirs if l != DEFAULT],
                         default_dir=DEFAULT
                         ), content_type='application/octet-stream')
+
 
 def render(lang, title):
     template = "%s/%s.html" % (lang, title)
     return render_template(template)
 
 
+def memoize(obj):
+    '''decorator to memoize things'''
+    cache = obj.cache = {}
+
+    @functools.wraps(obj)
+    def memoizer(*args, **kwargs):
+        key = str(args) + str(kwargs)
+        if key not in cache:
+            cache[key] = obj(*args, **kwargs)
+        return cache[key]
+    return memoizer
+
+
+@memoize
 def get_images_data():
+    log.info('getting images...')
     base_url = 'http://download.freepto.mx/latest/'
 
     latest = requests.get(base_url)
