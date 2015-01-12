@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 from flask.ext.bootstrap import Bootstrap
 import re
 import requests
@@ -24,10 +24,11 @@ def page(lang, title):
 @app.route('/.htaccess')
 def htaccess():
     DEFAULT='en'
-    return render_template('htaccess.html',
-            languages=[(l,l) for l in lang_dirs if l != DEFAULT],
-            default_dir=DEFAULT
-            )
+    return Response(
+        render_template('htaccess.html',
+                        languages=[(l,l) for l in lang_dirs if l != DEFAULT],
+                        default_dir=DEFAULT
+                        ), content_type='application/octet-stream')
 
 def render(lang, title):
     template = "%s/%s.html" % (lang, title)
